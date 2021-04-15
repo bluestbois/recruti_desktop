@@ -333,4 +333,28 @@ public class TestManager {
             System.out.println(ex.getMessage());
         }
     }
+    
+    /**
+     *
+     * @param test
+     * @param answers
+     * @return
+     */
+    public static double passTest(Test test, List<Integer> answers){
+        List<Question> questions = test.getQuestions();
+        
+        if(questions.size() != answers.size()){
+            System.out.println("No / Missing answers!");
+            return -1;
+        }
+        
+        int sum = 0;
+        for(int i = 0; i < questions.size(); i++){
+            sum += questions.get(i).getRightAnswer() == answers.get(i) 
+                ? questions.get(i).getPoints()
+                : 0;
+        }
+        
+        return sum / questions.size();
+    }
 }
