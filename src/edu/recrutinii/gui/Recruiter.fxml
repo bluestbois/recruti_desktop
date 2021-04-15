@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.recrutinii.gui.RecruiterController">
+   <children>
+      <Label layoutX="37.0" layoutY="37.0" text="Rechercher" />
+      <TextField fx:id="txt_searchID" layoutX="121.0" layoutY="33.0" promptText="name" />
+      <TextField fx:id="txt_Name" layoutX="23.0" layoutY="97.0" promptText="Name" />
+      <TextField fx:id="txt_address" layoutX="23.0" layoutY="134.0" promptText="Address" />
+      <TextField fx:id="txt_description" layoutX="23.0" layoutY="165.0" promptText="Description" />
+      <TextField fx:id="txt_phone_number" layoutX="23.0" layoutY="200.0" promptText="Phone Number" />
+      <TextField fx:id="txt_image" layoutX="23.0" layoutY="234.0" promptText="image" />
+      <TextField fx:id="txt_field_id" layoutX="23.0" layoutY="271.0" promptText="Field" />
+      <TextField fx:id="txt_email" layoutX="23.0" layoutY="308.0" promptText="Email" />
+      <PasswordField fx:id="txt_password" layoutX="23.0" layoutY="346.0" promptText="Password" />
+      <TableView fx:id="table_recruiter" layoutX="221.0" layoutY="97.0" onMouseClicked="#tablerecruiter_event" prefHeight="274.0" prefWidth="555.0">
+        <columns>
+          <TableColumn fx:id="recruiter_name" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="recruiter_address" prefWidth="75.0" text="Address" />
+            <TableColumn fx:id="recruiter_description" prefWidth="75.0" text="Description" />
+            <TableColumn fx:id="recruiter_phone_number" prefWidth="75.0" text="Phone" />
+            <TableColumn fx:id="recruiter_field_id" prefWidth="75.0" text="Field_id" />
+            <TableColumn fx:id="recruiter_email" prefWidth="179.0" text="Email" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_add" layoutX="29.0" layoutY="415.0" mnemonicParsing="false" onMouseClicked="#add_recruiter" text="Ajouter" />
+      <Button fx:id="btn_edit" layoutX="97.0" layoutY="415.0" mnemonicParsing="false" onMouseClicked="#edit_recruiter" text="Modifier" />
+      <Button fx:id="btn_delete" layoutX="169.0" layoutY="415.0" mnemonicParsing="false" onMouseClicked="#delete_recruiter" text="Supprimer" />
+      <Button layoutX="285.0" layoutY="33.0" mnemonicParsing="false" onMouseClicked="#search_recruiter" text="search" />
+   </children>
+</AnchorPane>
