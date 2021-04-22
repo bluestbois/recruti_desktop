@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="637.0" prefWidth="1009.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recrutini.GUI.AnnonceFrontController">
+   <children>
+      <Label fx:id="text" layoutX="315.0" layoutY="34.0" prefHeight="49.0" prefWidth="398.0" text="LISTE DES ANNONCES  DISPONIBLES" textFill="#101c9a">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="178.0" layoutY="73.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="537.0" prefWidth="802.0">
+         <content>
+            <VBox fx:id="liste_annonce" prefHeight="0.0" prefWidth="779.0" />
+         </content></ScrollPane>
+      <Hyperlink layoutX="26.0" layoutY="96.0" onAction="#Anonnces" prefHeight="23.0" prefWidth="139.0" text="Admin Dashboard " />
+   </children>
+</AnchorPane>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recrutini.GUI.UpdateProjetController">
+   <children>
+      <Pane fx:id="pnlOverview" layoutX="3.0" prefHeight="557.0" prefWidth="793.0" stylesheets="@../../../../../SWR/SWR/src/com/swr/GUI/Back/style.css">
+         <children>
+            <Label layoutX="67.0" layoutY="28.0" prefHeight="35.0" prefWidth="218.0" stylesheets="@../../../../../SWR/SWR/Desktop/src/GUI/style.css" text="Modifier le projet :">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="nombre" layoutX="287.0" layoutY="127.0" stylesheets="@../../../../../SWR/SWR/Desktop/src/GUI/style.css" textFill="#2808a4">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="75.0" layoutY="90.0" text="Titre de projet : " />
+            <Label layoutX="75.0" layoutY="127.0" prefHeight="17.0" prefWidth="74.0" text="Description :" />
+            <Label layoutX="75.0" layoutY="339.0" prefHeight="17.0" prefWidth="130.0" text="Image  :" />
+            <ImageView fx:id="imageview" fitHeight="126.0" fitWidth="256.0" layoutX="74.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="modifier" layoutX="75.0" layoutY="506.0" mnemonicParsing="false" onAction="#modifier" prefHeight="25.0" prefWidth="139.0" text="Confirmer" />
+            <Button layoutX="233.0" layoutY="506.0" mnemonicParsing="false" onAction="#Projets" prefHeight="25.0" prefWidth="139.0" text="Annuler" />
+            <TextField fx:id="titre" layoutX="206.0" layoutY="86.0" prefHeight="25.0" prefWidth="163.0" />
+            <TextArea fx:id="description" layoutX="158.0" layoutY="119.0" prefHeight="126.0" prefWidth="334.0" />
+            <Button fx:id="imagechose" layoutX="132.0" layoutY="335.0" mnemonicParsing="false" onAction="#import_image" text="choisir une image" />
+            <Label fx:id="message" layoutX="255.0" layoutY="296.0" prefHeight="17.0" prefWidth="243.0" textFill="#05c642" />
+            <DatePicker fx:id="date" layoutX="161.0" layoutY="284.0" />
+            <Label layoutX="76.0" layoutY="291.0" prefHeight="17.0" prefWidth="130.0" text="Date  :" />
+            <Label fx:id="label" layoutX="285.0" layoutY="28.0" text="Label" textFill="RED">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Hyperlink layoutX="607.0" layoutY="67.0" onAction="#Anonnces" prefHeight="23.0" prefWidth="139.0" text="Liste Des Annonces " />
+            <Hyperlink layoutX="607.0" layoutY="40.0" onAction="#Projets" prefHeight="23.0" prefWidth="139.0" text="Liste Des Projets" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
