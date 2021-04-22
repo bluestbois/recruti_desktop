@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="849.0" prefWidth="1167.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
+   <children>
+      <StackPane layoutX="25.0" layoutY="141.0" prefHeight="662.0" prefWidth="1163.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="760.0" prefWidth="1114.0">
+               <children>
+                  <AnchorPane fx:id="anchorSignIN" layoutX="711.0" layoutY="13.0" prefHeight="783.0" prefWidth="395.0">
+                     <children>
+                        <GridPane layoutX="45.0" prefHeight="759.0" prefWidth="320.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <JFXTextField fx:id="email" focusColor="WHITE" prefHeight="38.0" prefWidth="300.0" promptText="          EMAIL" unFocusColor="WHITE" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="25.0" />
+                                 </padding>
+                                
+                              
+                              </JFXTextField>
+                              <JFXPasswordField fx:id="password" focusColor="WHITE" prefHeight="31.0" prefWidth="229.0" promptText="          PASSWORD" unFocusColor="WHITE" GridPane.rowIndex="2">
+                                
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="25.0" />
+                                 </padding>
+                                 
+                              </JFXPasswordField>
+                              <ImageView fitHeight="25.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                                 <image>
+                                    <Image url="@../Images/loginform-uicon.png" />
+                                 </image>
+                                
+                              </ImageView>
+                              <ImageView fitHeight="31.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                                 <image>
+                                    <Image url="@../Images/loginform-picon.png" />
+                                 </image>
+                                 
+                              </ImageView>
+                              <CheckBox fx:id="cbpassword" mnemonicParsing="false" prefHeight="35.0" prefWidth="25.0" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+
+                              <JFXButton fx:id="btnLogin" buttonType="RAISED" onAction="#Login" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: black;" styleClass="btn-login-with-p" stylesheets="@../CascadingSteelsSheets/Style.css" text="Login" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <textFill>
+                                    <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                       <stops>
+                                          <Stop color="#ff7b7b" />
+                                          <Stop color="WHITE" offset="1.0" />
+                                       </stops>
+                                    </RadialGradient>
+                                 </textFill>
+                              </JFXButton>
+                              <JFXButton fx:id="btnlSignUp" onAction="#SignUp" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: black;" styleClass="btn-login-with-p" stylesheets="@../CascadingSteelsSheets/Style.css" text="Sign Up" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <textFill>
+                                    <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                       <stops>
+                                          <Stop color="#fc7373" />
+                                          <Stop color="WHITE" offset="1.0" />
+                                       </stops>
+                                    </RadialGradient>
+                                 </textFill>
+                              </JFXButton>
+                             
+                              <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" styleClass="btn-login-with-t" stylesheets="@../CascadingSteelsSheets/Style.css" text=" Sign in with Twitter" GridPane.halignment="CENTER" GridPane.rowIndex="7">
+                                 <font>
+                                    <Font name="Oswald Medium" size="16.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/tw-logo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="250.0" styleClass="btn-login-with-f" stylesheets="@../CascadingSteelsSheets/Style.css" text="Sign in with Facebook" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Images/fb-logo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="Oswald Medium" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="162.0" styleClass="btn-forgot-pwd" stylesheets="@../CascadingSteelsSheets/Style.css" text="Forgot password?" underline="true" GridPane.halignment="RIGHT" GridPane.rowIndex="9" GridPane.valignment="BOTTOM">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Label alignment="CENTER" maxWidth="146.0" prefHeight="50.0" prefWidth="146.0" stylesheets="@../CascadingSteelsSheets/Style.css" text="Sign In" GridPane.halignment="CENTER">
+                                 <font>
+                                    <Font name="Candara Bold" size="31.0" />
+                                 </font>
+                                 <textFill>
+                                    <RadialGradient centerX="0.5" centerY="0.5" cycleMethod="REPEAT" focusAngle="-100.89" proportional="false" radius="0.4268292682926829">
+                                       <stops>
+                                          <Stop color="BLACK" />
+                                          <Stop color="#1e2451" offset="1.0" />
+                                       </stops>
+                                    </RadialGradient>
+                                 </textFill>
+                              </Label>
+                              <Label fx:id="lblErrorMail" prefHeight="27.0" prefWidth="200.0" textFill="#ff4444" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="System Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="anchorSup" layoutX="29.0" layoutY="12.0" prefHeight="783.0" prefWidth="647.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <Label fx:id="lblTime" alignment="CENTER" prefHeight="50.0" prefWidth="225.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</AnchorPane>
