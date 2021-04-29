@@ -124,7 +124,9 @@ public class ForgotPasswordController implements Initializable {
         return false;
     }
 
-    private void Signup(ActionEvent event) throws IOException {
+    
+    @FXML
+    private void Signup(MouseEvent event) throws IOException {
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         stage.close();
@@ -133,9 +135,17 @@ public class ForgotPasswordController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+     @FXML
+    void Back(MouseEvent event) throws IOException {
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        stage.close();
 
-    @FXML
-    private void Signup(MouseEvent event) {
+        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("Login.fxml")));
+        stage.setScene(scene);
+        stage.show();
+
     }
+    
 
 }

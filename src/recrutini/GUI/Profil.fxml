@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recrutini.GUI.ProfilController">
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recrutini.GUI.ProfilController">
    <children>
       <Pane layoutX="2.0" layoutY="5.0" onMousePressed="#deleteAccount" prefHeight="700.0" prefWidth="563.0">
          <children>
@@ -47,8 +47,8 @@
             <Label layoutX="321.0" layoutY="285.0" text="Field :" />
             <Label layoutX="29.0" layoutY="341.0" prefHeight="17.0" prefWidth="85.0" text="Description :" />
             <ImageView fx:id="imageview" fitHeight="146.0" fitWidth="167.0" layoutX="368.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="btnupp" layoutX="64.0" layoutY="501.0" mnemonicParsing="false" onAction="#modifier" prefHeight="25.0" prefWidth="78.0" text="Modify" />
-            <Button fx:id="cam" layoutX="409.0" layoutY="490.0" mnemonicParsing="false" onAction="#webcam" text="Take a Photo" />
+            <Button fx:id="btnupp" layoutX="64.0" layoutY="501.0" mnemonicParsing="false" onAction="#modifier" prefHeight="25.0" prefWidth="78.0" styleClass="buttonCRUD" stylesheets="@stylesheet.css" text="Modify" textFill="WHITE" />
+            <Button fx:id="cam" layoutX="409.0" layoutY="490.0" mnemonicParsing="false" onAction="#webcam" styleClass="button4" stylesheets="@stylesheet.css" text="Take a Photo" textFill="WHITE" />
             <ImageView fx:id="oldimage" fitHeight="146.0" fitWidth="167.0" layoutX="23.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
             <Label fx:id="username" layoutX="29.0" layoutY="147.0" prefHeight="39.0" prefWidth="220.0" text="Label">
                <font>
@@ -61,18 +61,18 @@
                   <Image url="@images/logout.png" />
                </image>
             </ImageView>
-            <Button fx:id="btnin" layoutX="107.0" layoutY="634.0" mnemonicParsing="false" onAction="#send" prefHeight="25.0" prefWidth="65.0" text="Reset" />
+            <Button fx:id="btnin" layoutX="107.0" layoutY="634.0" mnemonicParsing="false" onAction="#send" prefHeight="25.0" prefWidth="65.0" styleClass="buttonCRUD" stylesheets="@stylesheet.css" text="Reset" textFill="WHITE" />
             <Label layoutX="32.0" layoutY="534.0" prefHeight="39.0" prefWidth="237.0" text="Change password">
                <font>
                   <Font name="System Bold Italic" size="27.0" />
                </font>
             </Label>
-            <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="309.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="357.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/list.png" />
                </image>
             </ImageView>
-            <Label fx:id="ads" layoutX="342.0" layoutY="7.0" onMousePressed="#jobs" opacity="0.5" prefHeight="43.0" prefWidth="220.0" text=" announcements">
+            <Label fx:id="ads" layoutX="395.0" layoutY="7.0" onMousePressed="#jobs" opacity="0.5" prefHeight="43.0" prefWidth="220.0" text="Dashboard">
                <font>
                   <Font size="29.0" />
                </font>

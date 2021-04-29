@@ -36,6 +36,17 @@ public class Recruiter {
         this.randoom = randoom;
     }
 
+     public Recruiter(String string, String string0, String string1, String string2, String string3, String string4, String string5) {
+         this.name = string0;
+         
+        this.email = string1;
+        this.password = string3;
+        this.adress = string4;
+        this.description = string2;
+        this.phone = string5;
+        this.field = string;
+    }
+
     
     
     public int getId() {

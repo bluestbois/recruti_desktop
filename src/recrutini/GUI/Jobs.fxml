@@ -4,27 +4,33 @@
 <?import javafx.scene.control.Pagination?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="recrutini.GUI.JobsController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recrutini.GUI.JobsController">
    <children>
       <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="10.0" prefHeight="578.0" prefWidth="757.0">
          <children>
-            <TableView fx:id="tableview" layoutX="34.0" layoutY="101.0" prefHeight="322.0" prefWidth="690.0">
+            <TableView fx:id="tableview" layoutX="34.0" layoutY="101.0" prefHeight="322.0" prefWidth="690.0" stylesheets="@stylesheet.css">
                <columns>
                   <TableColumn fx:id="Title" prefWidth="169.0" text="Title" />
                   <TableColumn fx:id="Description" prefWidth="192.0" text="Description" />
                   <TableColumn fx:id="Date" prefWidth="174.0" text="date" />
                </columns>
             </TableView>
-            <Pagination fx:id="pagination" layoutX="16.0" layoutY="81.0" prefHeight="407.0" prefWidth="725.0" />
+            <Pagination fx:id="pagination" layoutX="16.0" layoutY="81.0" prefHeight="407.0" prefWidth="725.0" styleClass="button7" />
             <Label fx:id="ads" layoutX="253.0" layoutY="26.0" opacity="0.5" prefHeight="43.0" prefWidth="220.0" text=" announcements">
                <font>
                   <Font size="29.0" />
                </font>
             </Label>
+            <ImageView fitHeight="67.0" fitWidth="68.0" layoutX="689.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

@@ -5,42 +5,56 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="384.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recrutini.GUI.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="435.0" prefWidth="588.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recrutini.GUI.LoginController">
    <children>
-      <Pane layoutX="-3.0" layoutY="-7.0" prefHeight="435.0" prefWidth="453.0">
+      <Pane layoutX="-142.0" prefHeight="435.0" prefWidth="736.0">
          <children>
-            <ImageView fx:id="imageview" fitHeight="146.0" fitWidth="167.0" layoutX="433.0" layoutY="454.0" pickOnBounds="true" preserveRatio="true" />
-            <TextField fx:id="mail" layoutX="108.0" layoutY="130.0" prefHeight="35.0" prefWidth="237.0" promptText="Enter your Email">
+            <ImageView fx:id="imageview" fitHeight="102.0" fitWidth="304.0" layoutX="153.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/cm-logo.png" />
+               </image></ImageView>
+            <TextField fx:id="mail" layoutX="445.0" layoutY="129.0" prefHeight="35.0" prefWidth="237.0" promptText="Enter your Email">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <PasswordField fx:id="pwd" layoutX="108.0" layoutY="184.0" prefHeight="35.0" prefWidth="237.0" promptText="Enter your password">
+            <PasswordField fx:id="pwd" layoutX="445.0" layoutY="183.0" prefHeight="35.0" prefWidth="237.0" promptText="Enter your password">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </PasswordField>
-            <Label fx:id="btnfo" layoutX="176.0" layoutY="277.0" onMousePressed="#forgot" prefHeight="17.0" prefWidth="102.0" text="Forgot password ?" underline="true">
+            <Label fx:id="btnfo" layoutX="512.0" layoutY="278.0" onMousePressed="#forgot" prefHeight="17.0" prefWidth="102.0" text="Forgot password ?" underline="true">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Label>
-            <Label layoutX="108.0" layoutY="14.0" opacity="0.5" prefHeight="102.0" prefWidth="214.0" text="Sign In">
+            <Label layoutX="490.0" layoutY="27.0" opacity="0.86" prefHeight="102.0" prefWidth="214.0" text="Sign In" textFill="#2b00ff">
                <font>
                   <Font size="55.0" />
                </font>
             </Label>
-            <Label fx:id="btnfo1" layoutX="137.0" layoutY="302.0" onMousePressed="#Singup" prefHeight="17.0" prefWidth="199.0" text="Don't have an account ? Sign up" textFill="#4b00ee" underline="true">
+            <Label fx:id="btnfo1" layoutX="475.0" layoutY="310.0" onMousePressed="#Singup" prefHeight="17.0" prefWidth="178.0" styleClass="buttonCRUD" stylesheets="@stylesheet.css" text="Don't have an account ? Sign up" textFill="#f8f8f8" underline="true">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Label>
-            <Button fx:id="btnin" layoutX="199.0" layoutY="234.0" mnemonicParsing="false" onAction="#signin" text="Sign in " />
+            <Button fx:id="btnin" layoutX="536.0" layoutY="235.0" mnemonicParsing="false" onAction="#signin" styleClass="button4" stylesheets="@stylesheet.css" text="Sign in " textFill="WHITE" />
+            <ImageView fitHeight="209.0" fitWidth="251.0" layoutX="166.0" layoutY="201.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/cm-main-img.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="73.0" fitWidth="102.0" layoutX="527.0" layoutY="341.0" onMouseClicked="#welcome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/left.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </children>

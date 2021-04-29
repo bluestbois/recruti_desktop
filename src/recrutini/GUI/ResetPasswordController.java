@@ -49,7 +49,7 @@ public class ResetPasswordController implements Initializable {
     private Label btnfo;
     private String email = "";
     Session S = Session.getInstance();
-   int timer = 60 ;
+   int timer = 120 ;
     @FXML
     private Label alert;
     /**

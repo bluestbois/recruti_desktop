@@ -252,7 +252,7 @@ private void addButtonToTable() throws SQLException {
     }
 
     @FXML
-    private void profile(MouseEvent event) throws IOException {
+    private void profil(MouseEvent event) throws IOException {
           Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         stage.close();

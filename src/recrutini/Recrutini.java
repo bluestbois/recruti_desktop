@@ -19,7 +19,7 @@ public class Recrutini extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("GUI/Login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("GUI/Welcome.fxml"));
         
         Scene scene = new Scene(root);
         

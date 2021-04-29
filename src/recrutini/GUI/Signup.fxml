@@ -7,21 +7,22 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recrutini.GUI.SignupController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recrutini.GUI.SignupController">
    <children>
-      <Pane layoutY="10.0" prefHeight="700.0" prefWidth="774.0">
+      <Pane layoutY="14.0" prefHeight="700.0" prefWidth="774.0">
          <children>
             <TextField fx:id="mail" layoutX="70.0" layoutY="117.0" prefHeight="35.0" prefWidth="237.0" promptText="Email">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
             </TextField>
-            <Label layoutX="44.0" layoutY="9.0" opacity="0.5" prefHeight="102.0" prefWidth="286.0" text="Sign Up">
+            <Label layoutX="44.0" layoutY="9.0" opacity="0.89" prefHeight="102.0" prefWidth="286.0" text="Sign Up" textFill="#2b04ee">
                <font>
                   <Font size="55.0" />
                </font>
@@ -91,9 +92,13 @@
             <Label layoutX="369.0" layoutY="335.0" text="Field :" />
             <Label layoutX="76.0" layoutY="405.0" prefHeight="17.0" prefWidth="85.0" text="Description :" />
             <ImageView fx:id="imageview" fitHeight="146.0" fitWidth="167.0" layoutX="433.0" layoutY="454.0" pickOnBounds="true" preserveRatio="true" />
-            <Button fx:id="btnupp" layoutX="83.0" layoutY="562.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="25.0" prefWidth="78.0" text="Sign up" />
-            <Button fx:id="back" layoutX="255.0" layoutY="562.0" mnemonicParsing="false" onAction="#back" text="Return" />
-            <Button fx:id="cam" layoutX="442.0" layoutY="414.0" mnemonicParsing="false" onAction="#webcam" text="Take a Photo" />
+            <Button fx:id="btnupp" layoutX="83.0" layoutY="562.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="25.0" prefWidth="78.0" styleClass="button6" stylesheets="@stylesheet.css" text="Sign up" textFill="WHITE" />
+            <Button fx:id="cam" layoutX="442.0" layoutY="414.0" mnemonicParsing="false" onAction="#webcam" styleClass="button4" stylesheets="@stylesheet.css" text="Take a Photo" textFill="WHITE" />
+            <ImageView fitHeight="102.0" fitWidth="202.0" layoutX="533.0" layoutY="9.0" onMousePressed="#retour" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/left.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </children>

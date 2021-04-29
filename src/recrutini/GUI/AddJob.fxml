@@ -6,10 +6,12 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recrutini.GUI.AddJobController">
+<AnchorPane id="AnchorPane" prefHeight="503.0" prefWidth="315.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="recrutini.GUI.AddJobController">
    <children>
       <TextField fx:id="title" layoutX="35.0" layoutY="106.0" prefHeight="35.0" prefWidth="237.0">
          <cursor>
@@ -21,16 +23,21 @@
       <Label layoutX="40.0" layoutY="323.0" text="Date :" />
       <Label layoutX="35.0" layoutY="158.0" text="Description :" />
       <Label layoutX="35.0" layoutY="77.0" text="Title :" />
-      <Label fx:id="btnfo" layoutX="40.0" layoutY="441.0" onMousePressed="#jobs" prefHeight="17.0" prefWidth="102.0" text=" announcements" textFill="#310dff" underline="true">
+      <Label fx:id="btnfo" layoutX="40.0" layoutY="441.0" onMousePressed="#jobs" prefHeight="17.0" prefWidth="111.0" text=" &lt;&lt; announcements" textFill="#310dff" underline="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <Button fx:id="btnin" layoutX="46.0" layoutY="391.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="67.0" text="Add" />
+      <Button fx:id="btnin" layoutX="46.0" layoutY="391.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="67.0" styleClass="buttonCRUD" stylesheets="@stylesheet.css" text="Add" textFill="WHITE" />
       <Label layoutX="41.0" layoutY="-10.0" opacity="0.5" prefHeight="102.0" prefWidth="253.0" text="Add announcement">
          <font>
             <Font size="25.0" />
          </font>
       </Label>
+      <ImageView fitHeight="53.0" fitWidth="53.0" layoutX="262.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/logo.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

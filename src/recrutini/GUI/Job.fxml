@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="recrutini.GUI.JobController">
+   <children>
+      <TableView fx:id="tableview" layoutX="79.0" layoutY="63.0" prefHeight="256.0" prefWidth="443.0">
+        <columns>
+          <TableColumn fx:id="Title" prefWidth="75.0" text="Title" />
+            <TableColumn fx:id="Description" prefWidth="150.0" text="Description" />
+            <TableColumn fx:id="Date" minWidth="0.0" prefWidth="107.0" text="Date" />
+        </columns>
+      </TableView>
+      <Pagination fx:id="pagination" layoutX="29.0" layoutY="14.0" prefHeight="362.0" prefWidth="562.0" />
+   </children>
+</AnchorPane>
