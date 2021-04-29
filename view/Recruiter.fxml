@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="639.0" prefWidth="1274.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.recrutini.controller.RecruiterController">
+   <children>
+      <VBox layoutY="-2.0" prefHeight="700.0" prefWidth="85.0" style="-fx-background-radius: 15 0 0 15;" styleClass="dashboard" stylesheets="@stylesheet.css">
+         <children>
+            <Pane prefHeight="79.0" prefWidth="74.0" style="-fx-background-radius: 15 0 15 15;">
+               <children>
+                  <Label />
+               </children>
+            </Pane>
+            <Button fx:id="profile" contentDisplay="TOP" mnemonicParsing="false" onAction="#Profils" prefHeight="66.0" prefWidth="86.0" styleClass="button3" stylesheets="@stylesheet.css" text="Candidate" textFill="WHITE">
+               <graphic>
+                  <ImageView fx:id="btnprofile" fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/user-01.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets bottom="25.0" />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="10.0" layoutY="142.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="85.0" styleClass="button3" stylesheets="@stylesheet.css" text="Events" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/event-01.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnforum" contentDisplay="TOP" mnemonicParsing="false" onAction="#Forum" prefHeight="66.0" prefWidth="87.0" styleClass="button3" stylesheets="@stylesheet.css" text="Forum" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/blog-01.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnFreelance" contentDisplay="TOP" mnemonicParsing="false" onAction="#Freelance" prefHeight="66.0" prefWidth="92.0" styleClass="button3" stylesheets="@stylesheet.css" text="Freelance" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/workspace.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnProjects" contentDisplay="TOP" mnemonicParsing="false" onAction="#Projects" prefHeight="66.0" prefWidth="86.0" styleClass="button3" stylesheets="@stylesheet.css" text="Project" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/projects.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnJobs" contentDisplay="TOP" mnemonicParsing="false" prefHeight="66.0" prefWidth="89.0" styleClass="button3" stylesheets="@stylesheet.css" text="Job" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/job.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnCandidature" contentDisplay="TOP" mnemonicParsing="false" onAction="#Candidature" prefHeight="66.0" prefWidth="86.0" styleClass="button3" stylesheets="@stylesheet.css" text="Candidature" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/candidature.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnCandidature1" contentDisplay="TOP" mnemonicParsing="false" onAction="#Candidature" prefHeight="66.0" prefWidth="86.0" styleClass="button3" stylesheets="@stylesheet.css" text="Recruiter" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/recruiter.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="25.0" />
+         </padding>
+      </VBox>
+      <Label layoutX="294.0" layoutY="169.0" text="Rechercher" />
+      <TextField fx:id="txt_searchID" layoutX="378.0" layoutY="165.0" promptText="name" />
+      <TextField fx:id="txt_Name" layoutX="760.0" layoutY="255.0" promptText="Name" />
+      <TextField fx:id="txt_address" layoutX="760.0" layoutY="292.0" promptText="Address" />
+      <TextField fx:id="txt_description" layoutX="760.0" layoutY="323.0" promptText="Description" />
+      <TextField fx:id="txt_phone_number" layoutX="760.0" layoutY="358.0" promptText="Phone Number" />
+      <TextField fx:id="txt_image" layoutX="760.0" layoutY="392.0" promptText="image" />
+      <TextField fx:id="txt_field_id" layoutX="760.0" layoutY="429.0" promptText="Field" />
+      <TextField fx:id="txt_email" layoutX="760.0" layoutY="466.0" promptText="Email" />
+      <PasswordField fx:id="txt_password" layoutX="760.0" layoutY="504.0" promptText="Password" />
+      <TableView fx:id="table_recruiter" layoutX="105.0" layoutY="211.0" onMouseClicked="#tablerecruiter_event" prefHeight="274.0" prefWidth="605.0">
+         <columns>
+            <TableColumn fx:id="recruiter_name" prefWidth="193.99996948242188" text="Name" />
+            <TableColumn fx:id="recruiter_description" prefWidth="223.00003051757812" text="Description" />
+            <TableColumn fx:id="recruiter_email" prefWidth="188.0" text="Email" />
+         </columns>
+      </TableView>
+      <Button fx:id="btn_add" layoutX="729.0" layoutY="575.0" mnemonicParsing="false" onMouseClicked="#add_recruiter" text="Ajouter" />
+      <Button fx:id="btn_edit" layoutX="797.0" layoutY="575.0" mnemonicParsing="false" onMouseClicked="#edit_recruiter" text="Modifier" />
+      <Button fx:id="btn_delete" layoutX="869.0" layoutY="575.0" mnemonicParsing="false" onMouseClicked="#delete_recruiter" text="Supprimer" />
+      <Button layoutX="542.0" layoutY="165.0" mnemonicParsing="false" onMouseClicked="#search_recruiter" text="search" />
+   </children>
+</AnchorPane>

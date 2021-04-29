@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="pane2" prefHeight="604.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.recrutini.controller.StatistiqueController">
+   <children>
+      <Pane fx:id="pane21" layoutX="84.0" layoutY="80.0" prefHeight="437.0" prefWidth="573.0" />
+      <Text layoutX="97.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistiques sur " wrappingWidth="248.13671875">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+      <Text fx:id="nb" layoutX="382.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="51.13671875">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+      <Text layoutX="432.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="annonces" wrappingWidth="187.13671875">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+      <Hyperlink fx:id="retour" layoutX="304.0" layoutY="522.0" prefHeight="23.0" prefWidth="115.0" text="Retour au annonces" />
+   </children>
+</Pane>

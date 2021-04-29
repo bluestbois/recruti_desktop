@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.recrutini.controller.ProfilController">
+   <children>
+      <Pane onMousePressed="#deleteAccount" prefHeight="720.0" prefWidth="1270.0">
+         <children>
+            <Label fx:id="logout" layoutX="1030.0" layoutY="88.0" onMousePressed="#logout" prefHeight="35.0" prefWidth="101.0" text="Logout">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tel" layoutX="714.0" layoutY="225.0" prefHeight="35.0" prefWidth="237.0" promptText="Telephone">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="adress" layoutX="380.0" layoutY="345.0" prefHeight="35.0" prefWidth="237.0" promptText="Address">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <TextField fx:id="nom" layoutX="380.0" layoutY="225.0" prefHeight="35.0" prefWidth="237.0" promptText="Fullname">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+            <Label fx:id="labtel" layoutX="319.0" layoutY="262.0" prefHeight="25.0" prefWidth="237.0" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="description" layoutX="371.0" layoutY="454.0" prefHeight="126.0" prefWidth="334.0" />
+            <Label layoutX="686.0" layoutY="352.0" text="Field :" textFill="WHITE" />
+            <Label layoutX="269.0" layoutY="478.0" prefHeight="17.0" prefWidth="85.0" text="Description :" textFill="WHITE" />
+            <ImageView fx:id="imageview" fitHeight="146.0" fitWidth="167.0" layoutX="760.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="btnupp" layoutX="485.0" layoutY="635.0" mnemonicParsing="false" onAction="#modifier" prefHeight="25.0" prefWidth="78.0" styleClass="buttonCRUD" stylesheets="@stylesheet.css" text="Modify" textFill="WHITE" />
+            <Button fx:id="cam" layoutX="790.0" layoutY="604.0" mnemonicParsing="false" onAction="#webcam" styleClass="button4" stylesheets="@stylesheet.css" text="Take a Photo" textFill="WHITE" />
+            <ImageView fx:id="oldimage" fitHeight="183.0" fitWidth="245.0" layoutX="564.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="username" layoutX="99.0" layoutY="64.0" prefHeight="84.0" prefWidth="461.0" text="Label">
+               <font>
+                  <Font name="System Bold Italic" size="57.0" />
+               </font>
+            </Label>
+            <Label fx:id="email" layoutX="99.0" layoutY="160.0" prefHeight="54.0" prefWidth="408.0" text="Label">
+               <font>
+                  <Font size="37.0" />
+               </font></Label>
+            <ImageView fitHeight="35.0" fitWidth="31.0" layoutX="1140.0" layoutY="94.0" onMousePressed="#logout" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/logout.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnin" layoutX="1092.0" layoutY="345.0" mnemonicParsing="false" onAction="#send" prefHeight="25.0" prefWidth="65.0" styleClass="buttonCRUD" stylesheets="@stylesheet.css" text="Reset" textFill="WHITE" />
+            <Label layoutX="1006.0" layoutY="223.0" prefHeight="39.0" prefWidth="237.0" text="Change password">
+               <font>
+                  <Font name="System Bold Italic" size="27.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="1030.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/list.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="ads" layoutX="1086.0" layoutY="29.0" onMousePressed="#jobs" prefHeight="43.0" prefWidth="78.0" text="Jobs ">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="password" layoutX="1006.0" layoutY="287.0" prefHeight="35.0" prefWidth="237.0" promptText="new password">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </PasswordField>
+            <Button fx:id="btnupp1" layoutX="1110.0" layoutY="650.0" mnemonicParsing="false" onAction="#deleteAccount" prefHeight="25.0" prefWidth="122.0" text="Delete Acount" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="field" layoutX="717.0" layoutY="347.0" prefHeight="35.0" prefWidth="237.0" />
+            <VBox layoutY="-4.0" prefHeight="726.0" prefWidth="72.0" style="-fx-background-radius: 15 0 0 15;" styleClass="dashboard" stylesheets="@stylesheet.css">
+               <children>
+                  <Pane prefHeight="79.0" prefWidth="74.0" style="-fx-background-radius: 15 0 15 15;">
+                     <children>
+                        <Label />
+                     </children>
+                  </Pane>
+                  <Button fx:id="profile" contentDisplay="TOP" mnemonicParsing="false" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@stylesheet.css" text="Profile" textFill="WHITE">
+                     <graphic>
+                        <ImageView fx:id="btnprofile" fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/user-01.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets bottom="25.0" />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button contentDisplay="TOP" layoutX="10.0" layoutY="142.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@stylesheet.css" text="Events" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/event-01.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnForum" contentDisplay="TOP" mnemonicParsing="false" onAction="#Forum" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@stylesheet.css" text="Forum" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/blog-01.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnFreelance" contentDisplay="TOP" mnemonicParsing="false" onAction="#Freelance" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@stylesheet.css" text="Freelance" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/workspace.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnJob" contentDisplay="TOP" mnemonicParsing="false" onAction="#Job" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@stylesheet.css" text="Job" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/job.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="25.0" />
+               </padding>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

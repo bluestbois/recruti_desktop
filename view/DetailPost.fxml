@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+<?import org.controlsfx.control.Rating?>
+
+<AnchorPane id="AnchorPane" prefHeight="701.0" prefWidth="1271.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.recrutini.controller.DetailPostController">
+    <children>
+        <Label fx:id="TitleP" layoutX="234.0" layoutY="197.0" prefHeight="34.0" prefWidth="295.0" underline="true">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="DescriptionP" layoutX="102.0" layoutY="607.0" prefHeight="45.0" prefWidth="449.0" />
+        <Label fx:id="idPc" layoutX="166.0" layoutY="522.0" prefHeight="30.0" prefWidth="184.0" />
+        <TableView fx:id="tableComment" layoutX="200.0" layoutY="373.0" onMouseClicked="#select" prefHeight="200.0" prefWidth="461.0" stylesheets="@stylesheet.css">
+            <columns>
+                <TableColumn fx:id="col_content" prefWidth="173.0" text="content" />
+                <TableColumn fx:id="col_rating" prefWidth="77.0" text="rating" />
+            <TableColumn fx:id="col_date" prefWidth="210.0" text="Date" />
+            </columns>
+        </TableView>
+        <Label layoutX="747.0" layoutY="164.0" text="Content :" />
+        <Label layoutX="757.0" layoutY="418.0" text="Rating :" />
+        <Button fx:id="btnajouter" layoutX="790.0" layoutY="482.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="30.0" prefWidth="64.0" styleClass="buttonCRUD" stylesheets="@stylesheet.css" text="Add" textFill="WHITE" />
+        <Button fx:id="btnupdate" layoutX="948.0" layoutY="482.0" mnemonicParsing="false" onAction="#update" prefHeight="30.0" prefWidth="75.0" styleClass="buttonCRUD" stylesheets="@stylesheet.css" text="Update" textFill="WHITE" />
+        <Button fx:id="btnDelete" layoutX="1125.0" layoutY="482.0" mnemonicParsing="false" onAction="#delete" prefHeight="30.0" prefWidth="74.0" styleClass="buttonCRUD" stylesheets="@stylesheet.css" text="Delete" textFill="WHITE" />
+        <Label fx:id="idC" layoutX="493.0" layoutY="135.0" prefHeight="25.0" prefWidth="31.0" />
+        <Label fx:id="idForum" layoutX="469.0" layoutY="426.0" prefHeight="30.0" prefWidth="110.0" text="  " />
+        <Label fx:id="titleForum" layoutX="132.0" layoutY="49.0" prefHeight="45.0" prefWidth="286.0" underline="true">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Label>
+        <Label fx:id="descriptionFourm" layoutX="111.0" layoutY="590.0" prefHeight="30.0" prefWidth="467.0" />
+        <VBox layoutX="74.0" prefHeight="34.0" prefWidth="388.0" style="-fx-background-radius: 0 0 15 0;" styleClass="dashboard" stylesheets="@stylesheet.css">
+            <padding>
+                <Insets bottom="25.0" />
+            </padding>
+        </VBox>
+        <Pane layoutX="736.0" layoutY="19.0" prefHeight="76.0" prefWidth="526.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@stylesheet.css">
+            <children>
+                <Label fx:id="userlabel" layoutX="14.0" layoutY="25.0" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <ImageView fx:id="logout" fitHeight="56.0" fitWidth="56.0" layoutX="445.0" layoutY="11.0" onMousePressed="#exit" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/logout.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+            </children>
+        </Pane>
+        <Line endX="100.0" layoutX="639.0" layoutY="136.0" startX="100.0" startY="515.0" stroke="#b9b1b1" strokeDashOffset="2.0" />
+        <Label layoutX="74.0" layoutY="5.0" prefHeight="25.0" prefWidth="85.0" text="Forum &gt;" textFill="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="TF" layoutX="132.0" layoutY="2.0" prefHeight="30.0" prefWidth="110.0" textFill="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="TP" layoutX="234.0" layoutY="4.0" prefHeight="30.0" prefWidth="110.0" textFill="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnClear" layoutX="949.0" layoutY="573.0" mnemonicParsing="false" onAction="#Clear" prefHeight="34.0" prefWidth="74.0" styleClass="buttonCRUD" stylesheets="@stylesheet.css" text="Clear All" textFill="WHITE" />
+      <TextArea fx:id="contentC" layoutX="900.0" layoutY="156.0" prefHeight="200.0" prefWidth="200.0" />
+      <Rating fx:id="RatingComment" layoutX="911.0" layoutY="402.0" prefHeight="32.0" prefWidth="200.0" rating="0.0" />
+      <Rating fx:id="RatingPost" disable="true" layoutX="542.0" layoutY="309.0" partialRating="true" rating="0.0">
+         <effect>
+            <DropShadow color="#eeb30f" spread="0.6" />
+         </effect></Rating>
+      <WebView fx:id="DescriptionForum" layoutX="159.0" layoutY="110.0" prefHeight="76.0" prefWidth="512.0" />
+      <WebView fx:id="DescriptionPost" layoutX="215.0" layoutY="231.0" prefHeight="66.0" prefWidth="503.0" />
+      <ImageView fitHeight="34.0" fitWidth="49.0" layoutX="422.0" layoutY="1.0" onMousePressed="#Return" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/left.png" />
+         </image>
+      </ImageView>
+      <VBox layoutY="-4.0" prefHeight="719.0" prefWidth="74.0" style="-fx-background-radius: 15 0 0 15;" styleClass="dashboard" stylesheets="@stylesheet.css">
+         <children>
+            <Pane prefHeight="79.0" prefWidth="74.0" style="-fx-background-radius: 15 0 15 15;">
+               <children>
+                  <Label />
+               </children>
+            </Pane>
+            <Button fx:id="profile" contentDisplay="TOP" mnemonicParsing="false" onAction="#Profile" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@stylesheet.css" text="Profile" textFill="WHITE">
+               <graphic>
+                  <ImageView fx:id="btnprofile" fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/user-01.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets bottom="25.0" />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="10.0" layoutY="142.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@stylesheet.css" text="Events" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/event-01.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnForum" contentDisplay="TOP" mnemonicParsing="false" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@stylesheet.css" text="Forum" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/blog-01.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnFreelance" contentDisplay="TOP" mnemonicParsing="false" onAction="#Freelance" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@stylesheet.css" text="Freelance" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/workspace.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnJob" contentDisplay="TOP" mnemonicParsing="false" onAction="#Job" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@stylesheet.css" text="Job" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/job.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="25.0" />
+         </padding>
+      </VBox>
+    </children>
+</AnchorPane>

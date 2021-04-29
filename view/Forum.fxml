@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.HTMLEditor?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1270.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.recrutini.controller.ForumController">
+    <children>
+        <Label layoutX="741.0" layoutY="130.0" text="Title :" />
+        <Label layoutX="741.0" layoutY="190.0" text="Description :" />
+        <TextField fx:id="tfTitleForum" layoutX="888.0" layoutY="127.0" prefHeight="25.0" prefWidth="189.0" />
+        <Button layoutX="872.0" layoutY="484.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="34.0" prefWidth="85.0" styleClass="buttonCRUD" stylesheets="@stylesheet.css" text="Add" textFill="WHITE" />
+        <TableView fx:id="tableFourm" layoutX="97.0" layoutY="139.0" onMouseClicked="#handleAction" prefHeight="380.0" prefWidth="213.0" stylesheets="@stylesheet.css">
+            <columns>
+                <TableColumn fx:id="col_title" prefWidth="272.0" text="Title" />
+            </columns>
+        </TableView>
+        <Button fx:id="btnDeleteForum" layoutX="1140.0" layoutY="482.0" mnemonicParsing="false" onAction="#delete" prefHeight="34.0" prefWidth="85.0" styleClass="buttonCRUD" stylesheets="@stylesheet.css" text="Delete" textFill="WHITE" />
+        <Button fx:id="btnUpdateForum" layoutX="1003.0" layoutY="484.0" mnemonicParsing="false" onAction="#update" prefHeight="34.0" prefWidth="85.0" styleClass="buttonCRUD" stylesheets="@stylesheet.css" text="Update" textFill="WHITE" />
+        <TextField fx:id="cherche" layoutX="97.0" layoutY="78.0" prefHeight="25.0" prefWidth="213.0" />
+        <Label fx:id="controleTitle" layoutX="888.0" layoutY="165.0" prefHeight="34.0" prefWidth="268.0" textFill="RED" />
+        <Label fx:id="controleDescription" layoutX="957.0" layoutY="408.0" prefHeight="34.0" prefWidth="278.0" textFill="RED" />
+        <Button fx:id="btnDetails" layoutX="931.0" layoutY="568.0" minWidth="33.0" mnemonicParsing="false" onAction="#detailsForum" prefHeight="34.0" prefWidth="85.0" styleClass="buttonCRUD" stylesheets="@stylesheet.css" text="Details" textFill="WHITE" />
+        <Label fx:id="tfIdForum" layoutX="193.0" layoutY="67.0" prefHeight="18.0" prefWidth="118.0" />
+        <Pane layoutX="708.0" layoutY="14.0" prefHeight="76.0" prefWidth="548.0" style="-fx-background-radius: 20 20 0 0;" styleClass="linear-grad" stylesheets="@stylesheet.css">
+            <children>
+                <Label fx:id="userlabel" layoutX="14.0" layoutY="25.0" textFill="WHITE">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <ImageView fx:id="logout" fitHeight="56.0" fitWidth="56.0" layoutX="468.0" layoutY="10.0" onMousePressed="#exit" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../img/logout.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+            </children>
+        </Pane>
+        <Line endX="100.0" layoutX="609.0" layoutY="127.0" startX="100.0" startY="515.0" stroke="#b9b1b1" strokeDashOffset="2.0" />
+        <VBox layoutX="74.0" layoutY="-6.0" prefHeight="34.0" prefWidth="295.0" style="-fx-background-radius: 0 0 15 0;" styleClass="dashboard" stylesheets="@stylesheet.css">
+            <padding>
+                <Insets bottom="25.0" />
+            </padding>
+        </VBox>
+        <Label fx:id="titleF" layoutX="137.0" layoutY="1.0" prefHeight="27.0" prefWidth="118.0" textFill="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="78.0" layoutY="-3.0" prefHeight="34.0" prefWidth="85.0" text="Forum &gt;" textFill="WHITE">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnClear" layoutX="1088.0" layoutY="568.0" mnemonicParsing="false" onAction="#Clear" prefHeight="34.0" prefWidth="74.0" styleClass="buttonCRUD" stylesheets="@stylesheet.css" text="Clear All" textFill="WHITE" />
+      <WebView fx:id="viewDescription" disable="true" layoutX="352.0" layoutY="139.0" prefHeight="380.0" prefWidth="349.0" />
+      <Label fx:id="user" layoutX="521.0" layoutY="52.0" prefHeight="34.0" prefWidth="160.0" />
+      <Label fx:id="userForum" layoutX="355.0" layoutY="95.0" prefHeight="34.0" prefWidth="189.0" />
+      <VBox prefHeight="719.0" prefWidth="74.0" style="-fx-background-radius: 15 0 0 15;" styleClass="dashboard" stylesheets="@stylesheet.css">
+         <children>
+            <Pane prefHeight="79.0" prefWidth="74.0" style="-fx-background-radius: 15 0 15 15;">
+               <children>
+                  <Label />
+               </children>
+            </Pane>
+            <Button fx:id="profile" contentDisplay="TOP" mnemonicParsing="false" onAction="#Profile" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@stylesheet.css" text="Profile" textFill="WHITE">
+               <graphic>
+                  <ImageView fx:id="btnprofile" fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/user-01.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets bottom="25.0" />
+               </opaqueInsets>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button contentDisplay="TOP" layoutX="10.0" layoutY="142.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@stylesheet.css" text="Events" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/event-01.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnForum" contentDisplay="TOP" mnemonicParsing="false" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@stylesheet.css" text="Forum" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/blog-01.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnFreelance" contentDisplay="TOP" mnemonicParsing="false" onAction="#Freelance" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@stylesheet.css" text="Freelance" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/workspace.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnJob" contentDisplay="TOP" mnemonicParsing="false" onAction="#Job" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@stylesheet.css" text="Job" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="34.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/job.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="25.0" />
+         </padding>
+      </VBox>
+      <HTMLEditor fx:id="tfDescriptionForum" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="741.0" layoutY="229.0" prefHeight="200.0" prefWidth="506.0" />
+     </children>
+</AnchorPane>
